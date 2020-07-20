@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+
+<html lang="fr" onkeydown="toggle_bonus(event)">
+
+<head>
+
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="FM_ps_vers_un_monde_meilleur.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css"
+    href="Ressource_icone/open-iconic-master/open-iconic-master/font/css/open-iconic-bootstrap.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+</head>
+
+<!-- <div class="alert alert-warning alert-dismissible fade show" role="alert"
+  style="margin:0;position: fixed;left:40%;top:33%;z-index: 9999;width: 500px;">
+  <strong>ATTENTION </strong>Ce site est en <strong>"construction"</strong> La version présenté ici ne saurait être
+  représentative du contenu final ambitionné par l'auteur
+  <br>En outre son rôle est de présenter "somairement" un projet extremement vaste . Sa vocation est plus de suciter un
+  intéret que réellement de le définir de façon exausthive.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div> -->
+
+<body>
+  <header class="jumbotron text-center bg-info header" style="margin-bottom: 0;">
+    <h1>CONSTRUIRE | ENSEMBLE</h1>
+    <h2 style="font-style:italic;">Le monde de demain <span class="oi oi-thumb-up"></span></h2>
+    <a href="#resume"><button class="btn btn-light m-auto">Découvrez comment <span
+          class="oi oi-arrow-bottom"></span></button></a>
+  </header>
+
+  <!-- NAVMENU -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light menu-principal sticky-top"
+    style="box-shadow: rgb(133, 255, 249) 0 0 10px;padding: 0;padding-left: 1em;">
+    <a class="navbar-brand" href="#start_sommaire"><span class="oi oi-globe"></span>DECOUVRIR COMMENT : </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li id="menu_item_1" class="nav-item active">
+          <a class="nav-link" href="FM_ps_d_ou_on_part.html"><span class="oi oi-location"></span>- D'ou est ce qu'on part ? - <span
+              class="sr-only"></span></a>
+        </li>
+        <li id="menu_item_2" class="nav-item">
+          <a class="nav-link" href="FM_ps_ou_allons_nous.html"><span class="oi oi-map-marker"></span>- Pour aller ou ? -</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a tittle="En cours de création" class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown"
+            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Qui suis je ?
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a title="confidentiel" class="dropdown-item" href="#">Mon cv</a>
+            <a class="dropdown-item" href="#">En apprendre plus sur moi</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Comprendre mon engagement</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a tittle="En cours de création" class="nav-link dropdown-toggle d-none" href="#" id="navbarDropdown2"
+            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Bonus
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+            <a title="confidentiel" class="dropdown-item" href="#" id="toggle_hanoi_screen">Jouer à la tour de Hanoi</a>
+            <a class="dropdown-item disabled" href="#">Bientôt plus de contenu</a>
+
+          </div>
+        </li>
+        <h1 id="alphonse"></h1>
+      </ul>
+
+    </div>
+  </nav> <!-- fin nav menu -->
+
+
+
+  <div class="game flex-column justify-content-center align-items-center p-5" id="hanoi_screen">
+    <button type="button" style="margin-bottom: 15px;" onclick="init_game()"><span class="oi oi-check"></span> START
+    </button>
+    <canvas id="main_windows_game" height="400" width="600"
+      style="border: black 1px solid;background-color: aquamarine;"></canvas>
+    <div class="game_controller d-flex justify-content-between w-25">
+      <button class="oi oi-arrow-right"></button>
+      <div><button class="oi oi-arrow-left" style="margin-right:10px"></button><button
+          class="oi oi-arrow-right"></button></div><button class="oi oi-arrow-left"></button>
+    </div>
+  </div>  <!-- Jeux FIN -->
+
+  <div class="container-fluid">
+    <div id="start_sommaire" class="row" style="">
+      <div class="col-lg-12" style="padding:0">
+
+        <!-- CAROUSEL PRINCIPAL -->
+
+        <div id="carousel_sommaire" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel_sommaire" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel_sommaire" data-slide-to="1"></li>
+            <li data-target="#carousel_sommaire" data-slide-to="2"></li>
+            <li data-target="#carousel_sommaire" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active" id="slide1">
+              <h1>TOUT A UNE CAUSE | TOUT A UNE ORIGINE</h1>
+              <div class="carousel-caption d-none d-md-block">
+
+                <h5>La souffrance , l'éxclusion , la misère, l'asservissement , la violence, la haine </h5>
+                <p>et ... <strong>Tout ce qui a une origine</strong> peut avoir une fin</p>
+              </div>
+            </div>
+            <div class="carousel-item" id="slide2">
+              <h1>UNE APPROCHE RATIONELLE ET REALISTE</h1>
+              <div class="carousel-caption d-none d-md-block">
+
+                <h5>Une annalyse en <strong>profondeur</strong></h5>
+                <p>Tenter de résoudre un problème complèxe sans le comprendre ne fait que contribuer à sa compléxité
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item" id="slide3">
+              <h1>PARTIR DE L'INDIVIDU | CONSTRUIRE LE MONDE DE DEMAIN</h1>
+              <div class="carousel-caption d-none d-md-block">
+
+                <h5>Offrir des moyens d'action individuel , pour construire ensemble un monde meilleur</h5>
+                <p>Des solutions simples , accessibles , <strong>agréables et ludiques</strong></p>
+              </div>
+            </div>
+            <div class="carousel-item" id="slide4">
+              <h1>ABOLIR LES CONTRAINTES | RESPONSABLE DE LA SOUFFRANCE HUMAINE</h1>
+              <div class="carousel-caption d-none d-md-block">
+
+                <h5>Toutes souffrance chronique est le produit d'une contrainte</h5>
+                <p>Le manque de liberté <strong>Est à l'origine de toute souffrance</strong></p>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel_sommaire" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel_sommaire" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+
+          </div>
+        </div> <!-- carousel principal end-->
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <!-- RESUME  -->
+  <div id="resume" class="text-center ">
+    <div>
+      <h2>
+        <strong>Aider le monde : <br>à s'aider lui même !</strong>
+      </h2>
+      <h6>
+        <q><em>Si vous tenez (vraiment) à tout résumé en une phrase</em></q>
+      </h6>
+    </div>
+    <br>
+    <h4 style="margin-bottom:25px">
+      <em>Tel pourrait être l'origine de cette démarche volontaire s'étant fixé comme objectif :</em>
+    </h4>
+    <ul>
+      <li>
+        D'éttendre les possibilités de chacun de déterminer le cours de sa vie
+      </li>
+      <li>
+        D'Encourager , soutenir , toutes personnes souhaitant apporter des changements positif dans l'éxistence
+      </li>
+      <li>
+        De permettre à l'humain de s'affranchir de la violence , de la misère , et des luttes intestines .
+      </li>
+    </ul>
+  </div><!--Resumé fin-->
+  
+
+  <div class="container-fluid">
+    <div class="row sommaire" style="">
+
+      <div class="col-lg-9" style="">
+        <h5 class="sommaire_index_categorie_title">COMPRENDRE</h5>
+        <h5>Pour agir il faut comprendre</h5>
+        <div class="row">
+
+          <div class="col-lg-4">
+
+            <div id="index1" class="sommaire_index-container">
+              <a href="#background_1">
+                <h5 class="sommaire_index_title">La démarche global</h5>
+              </a>
+              <div class="carousel-container">
+                <div id="" class="carousel_index carousel slide" data-ride="carousel">
+
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <h5>Ouvert à tous ceux qui le veulent</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Organiser intéligement les bonnes volontés</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Coordonné,organiser vos actions pour maximiser leurs impact positif</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Lutter contre l'éxclusion (tout le monde a une place)</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>offrir un choix suplémentaire en matière d'organisation de la vie</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Créer ensemble un monde plus juste pour chacun</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Votre bonheur comme finalité</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Vous êtes unique votre différence est précieuse</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Retrouvez VOTRE pouvoir de décision sur VOTRE vie</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Réalisez vos rèves , en contribuant au succès de ceux des autres</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Personne ne sait mieux que vous , ce que vous voulez</h5>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <img id="img1" class="img">
+              <div id="sommaire_text1" class="sommaire_text">
+                <ul>
+                  <li>
+                    Un soutien dans le projet personnel des individus la ou leurs efforts individuel ne suffisent plus
+                  </li>
+                  <li>
+                    Une démarche altruiste désintéressé, a but non lucratif, axé sur le soutien et l'accompagnement
+                    des
+                    personnes désirant voir évolué leurs modes de vie
+                  </li>
+                </ul>
+              </div>
+              <span id="sommaire_spoiler1" style="" class="oi oi-arrow-circle-bottom sommaire_spoiler"> Voir
+                plus</span>
+            </div>
+
+          </div><!-- fin la demarche globale-->
+
+          <div class="col-lg-4" style="">
+            <div id="index2" class="sommaire_index-container">
+              <h5 class="sommaire_index_title">Votre constat </h5>
+              <div class="carousel-container">
+                <div id="" class="carousel_index carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <h5>La violence ? la misère ? l'éxclusion ?</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>La vie est devenue le rouage d'un mécanisme qui la depasse ?</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Pas de place pour ceux qui veulent vivre une vie différente ?</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Des ressources naturelles limités ? un modèle de croissance ilimité ?</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Les animaux considéré comme des objets ou des sujets ?</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>La liberté d'entreprendre ?</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>L'impression de passer une vie entière à la gagner ?</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Votre opinion personnel et vos convictions ne sont pas représenté ?</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Vous aimeriez pouvoir découvrir apprendre voyager créer entreprendre ?</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Laiser un meilleur avenir au générations futurs ?</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>L'impression que ce qui est important et vous concerne est décidé sans vous</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img id="img2" class="img">
+              <div id="sommaire_text2" class="sommaire_text">
+                <ul>
+                  <li>
+                    Si tout est absolument parfait dans votre vie je n'ai qu'une chose à dire : sincérement TANT MIEUX.
+
+                  </li>
+                  <li>
+                    Ce projet s'adresse en priorité à ceux qui considère qu'un problème global impacte leurs
+                    existence et qu'ils ne peuvent résoudre isolé des autres.
+                  </li>
+                </ul>
+              </div>
+              <span id="sommaire_spoiler2" style="" class="oi oi-arrow-circle-bottom sommaire_spoiler"> Voir plus</span>
+            </div>
+          </div><!-- le pourquoi fin-->
+
+
+          <div class="col-lg-4" style="">
+
+            <div id="index3" class="sommaire_index-container">
+              <h5 class="sommaire_index_title">Un but</h5>
+              <div class="carousel-container">
+                <div id="" class="carousel_index carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <h5>Aider les autres à résoudre leurs problème c'est : s'aider sois même</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Adopter une vision du problème permetant réellement sa résolution</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Si un problème n'a pas de solution c'est qu'il est mal posé A.Einstein</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Renoncer a la haine , à la vengance</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Reduire progressivement votre dépendance a ce qui vous cause du tort</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Se sentir responsable du cours de son existence</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Appliquer des méthodes , simples , faciles , agréables , MAIS au COTIDIEN</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Construire pas a pas un monde différent</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Prendre la décision de s'engager dans votre procéssus</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <img id="img3" class="img">
+              
+              <div id="sommaire_text3" class="sommaire_text">
+                <ul>
+                  <li>
+                    Développer une compréhension fine du problème ,Partager l'espoir,Commencer doucement a se libérer
+                    des
+                    contraintes,
+                    Regagner en santé en bonheur , Commencer a cultiver le monde de demain
+                  </li>
+                  <li>
+                    Participer , contribuer , mettre en commun savoir et moyen ,
+                  </li>
+                </ul>
+              </div>
+              <span id="sommaire_spoiler3" style="" class="oi oi-arrow-circle-bottom sommaire_spoiler"> Voir plus</span>
+            </div>
+          </div>
+          <!--Le but fin-->
+        </div>
+
+
+      </div>
+
+      <div class="col-lg-3" style="">
+        <!-- Colonne Agir-->
+
+        <h5 class="sommaire_index_categorie_title">AGIR</h5>
+        <h5>Pour réussir il faut agir</h5>
+
+        <div class="row">
+
+          <div class="col-lg-12" style="">
+            <!-- <button style="" type="button" data-toggle="modal" data-target="#modal_action" style="margin:0;padding:0;"> -->
+            <div id="index4" class="sommaire_index-container">
+
+              <h5 class="sommaire_index_title">Passer à l'action</h5>
+              <div class="carousel-container">
+                <div id="" class="carousel_index carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <h5>Des outils simples mais puissants ! conçu par par vous , pour vous !</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>les conséquences indirect de vos action profitent aux autres</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Des méthodes agréable à appliquer et qui font du bien</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5>Coordoner intéligement avec vos tiers vous travaillez mieux</h5>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div id="img4" class="img">
+                
+                <div class="sommaire_text" id="sommaire_text4">
+                  <ul>
+                    <li>
+                      Utiliser des moyens efficaces simples et sans danger pour agir et transformer le
+                      monde qui vous entoure , proposer à votre tour des moyens testés et fiables,
+                    </li>
+                    <li>
+                      Oeuvrer jour après jour mais constament, partager vos avancés , votre bonheur.
+                    </li>
+                  </ul>
+                </div>
+                <span id="sommaire_spoiler4" style="" class="oi oi-arrow-circle-bottom sommaire_spoiler"> Voir plus</span>
+              </div>
+            </div><!-- Agir fin -->
+            <!-- </button> -->
+          </div>
+
+        </div>
+
+      </div>
+      <div class="sommaire_text_bottom">
+
+      </div>
+
+      <div class="modal fade" id="modal_action" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true" style="z-index: 9999;text-align: center;">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Des outils efficaces parce-que : adaptés sur mesure à vos
+                besoin</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Des méthodes d'actions sont proposé par l'auteur mais aussi : <strong>par vous </strong>.<br>Null ne peut
+              a lui seul résoudre le défis de proposer une solution universel pour le bonheur de l'humanité . toutes
+              personnes est différentes , tout les lieux les histoires les convictions sont différentes . ce qu'il faut
+              c'est un tissus de solution <strong>connecté bout à bout</strong>. et non UNE solution issu d'une vue de
+              l'esprit . le modèle du logiciel libre est selon l'auteur le modèle économique viable de demain . mais ce
+              n'est que son point de vu . envie de proposer le votre ?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Oui dés que possible !</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Pas forcement non !</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- <div class="list-group"><ul list-type-style="square">
+      <li><h1>Pas de panique ? Découvrez pourquoi <span class="oi oi-arrow-bottom"></span></h1></li>
+      <li><h1>Pas de panique ? Découvrez pourquoi <span class="oi oi-arrow-bottom"></span></h1></li>
+
+    </ul></div> -->
+
+
+      <!-- 1 : Le pourquoi : Le plus grand frein n'est pas l'ignorance mais ce qui la comble sans ensigné "comprendre réelement le problème pour agir -->
+      <!-- Fixer un objectif , proposer une explication original au problème, exposer les leviers permetant d'operer dessus efficacement , Proposer une vue d'ensemble-->
+      <!-- 2 : Le comment :  proposer des séries de méthode accessible simple , adapté ,facile pour oeuvrer en douceur dans la résolution de ce problème  -->
+      <!-- Des méthodes simples mais EXTREMEMENT efficaces ,  -->
+      <!-- 3 : Concentrer les efforts , synchroniser , harmoniser , coordoné organiser , rendre compatible  -->
+
+      <!-- CORPS DE LA PAGE  -->
+      <div class="container-fluid">
+        <div id="background_1" class="row rubrique_background">
+          <h2 class="rubrique_title">LA DEMARCHE GLOBAL : </h2>
+          <h5>(Présentation général)</h5>
+          <img src="Ressource_image/player on.png" style="cursor: pointer;" alt="" data-toggle="modal"
+            data-target="#modal_demarche_global" />
+        </div>
+        <div id="la_demarche_global" class="row rubrique d-none d-md-flex text-center">
+
+          <div class="col-lg-9">
+            <div class="row h-100">
+              <div class="col-lg-4 h-100 rubrique_question" style="box-shadow: black 0 0 10px">
+                <ul>
+                  <li data-target="#carousel_faq_rubrique_1" data-slide-to="0">Qui est à l'origine de ce projet ?</li>
+                  <p >(Cette personne sait elle de quoi elle
+                    parle
+                    ?)</p>
+                  <li data-target="#carousel_faq_rubrique_1" data-slide-to="1">Pourquoi envisager un changement aussi
+                    global
+                    ?</li>
+                  <p>(Et est ce vraiment nécessaire ?)</p>
+                  <li data-target="#carousel_faq_rubrique_1" data-slide-to="2">Qu'est ce que cette démarche et quelle
+                    est
+                    son but ?</li>
+                  <p>(Est ce vraiment réalisable ?)</p>
+                  <li data-target="#carousel_faq_rubrique_1" data-slide-to="3">A qui s'adresse ce projet ?</li>
+                  <p>(Pourquoi me concerne il ?)</p>
+                </ul>
+              </div>
+              <div class="col-lg-8 p-0 h-100">
+                <div id="carousel_faq_rubrique_1" class="carousel slide carousel_faq_rubrique" data-ride="carousel"
+                  style="height:100%;" data-interval="false">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel_faq_rubrique_1" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel_faq_rubrique_1" data-slide-to="1"></li>
+                    <li data-target="#carousel_faq_rubrique_1" data-slide-to="2"></li>
+                    <li data-target="#carousel_faq_rubrique_1" data-slide-to="3"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <!-- <h2 class="d-flex h-100 justify-content-center align-items-center flex-column">TOUT A UNE CAUSE | TOUT A UNE ORIGINE</h2> -->
+                      <div class="content">
+                        <h2>Un jeune homme de 27 ans : <br><br><q>Avant de me lancer j'ai passé 13 ans de ma vie a
+                            chercher
+                            a comprendre le pourquoi ...<br> pourquoi les guerres , pourquoi la pauvreté pourquoi la
+                            décadence. J'ai cherché à comprendre cela, mais aussi et surtout ...</q></h2>
+                      </div>
+
+
+                    </div>
+                    <div class="carousel-item">
+                      <div class="content">
+                        <h2>Tout simplement parce que le local dépend du global et inversement et que si on admet le
+                          principe que l'individu dépend de son environnement ...</h2>
+                      </div>
+
+                    </div>
+                    <div class="carousel-item">
+                      <div class="content">
+                        <h2>TOUT A UNE CAUSE | TOUT A UNE ORIGINE</h2>
+                      </div>
+
+                    </div>
+                    <div class="carousel-item">
+                      <div class="content">
+                        <h2>TOUT A UNE CAUSE | TOUT A UNE ORIGINE</h2>
+                      </div>
+                    </div>
+
+
+
+
+                  </div>
+                </div><!-- carousel end-->
+              </div>
+
+            </div>
+          </div>
+          <div id="rubrique1_photo" class="col-lg-3"></div>
+        </div>
+
+
+        <div id="background_2" class="row rubrique_background">
+          <h2 class="rubrique_title">Le BUT : Que vous n'ayez plus besoin d'aide</h2>
+          <h5>(Vous donner les moyens d'agirs !)</h5>
+          <img src="Ressource_image/player on.png" style="cursor: pointer;" alt="" data-toggle="modal"
+            data-target="#modal_demarche_global" />
+        </div>
+
+        <div id="le_pourquoi" class="row rubrique d-none d-md-flex text-center">
+
+          <div id="rubrique2_photo" class="col-lg-3"></div>
+          <div class="col-lg-9 h-100">
+            <div class="row h-100">
+
+
+              <!-- CAROUSEL FAQ RUBRIQUE 2 -->
+              <div class="col-lg-8 p-0 h-100">
+                <div id="carousel_faq_rubrique_2" class="carousel slide carousel_faq_rubrique" data-ride="carousel"
+                  style="height:100%;" data-interval="false">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel_faq_rubrique_2" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel_faq_rubrique_2" data-slide-to="1"></li>
+                    <li data-target="#carousel_faq_rubrique_2" data-slide-to="2"></li>
+                    <li data-target="#carousel_faq_rubrique_2" data-slide-to="3"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <!-- <h2 class="d-flex h-100 justify-content-center align-items-center flex-column">TOUT A UNE CAUSE | TOUT A UNE ORIGINE</h2> -->
+                      <div class="content">
+                        <h2>TOUT A UNE CAUSE | TOUT A UNE ORIGINE</h2>
+                      </div>
+
+
+                    </div>
+                    <div class="carousel-item">
+                      <div class="content">
+                        <h2>TOUT A UNE CAUSE | TOUT A UNE ORIGINE</h2>
+                      </div>
+
+                    </div>
+                    <div class="carousel-item">
+                      <div class="content">
+                        <h2>TOUT A UNE CAUSE | TOUT A UNE ORIGINE</h2>
+                      </div>
+
+                    </div>
+                    <div class="carousel-item">
+                      <div class="content">
+                        <h2>TOUT A UNE CAUSE | TOUT A UNE ORIGINE</h2>
+                      </div>
+                    </div>
+
+
+
+
+                  </div>
+                </div><!-- carousel end-->
+              </div>
+              <div class="col-lg-4 h-100 rubrique_question" style="box-shadow: black 0 0 10px;">
+                <ul>
+                  <li data-target="#carousel_faq_rubrique_2" data-slide-to="0">Qui est à l'origine de ce projet ?</li>
+                  <p data-target="#carousel_faq_rubrique_2" data-slide-to="0">(Cette personne sait elle de quoi elle
+                    parle
+                    ?)</p>
+                  <li data-target="#carousel_faq_rubrique_2" data-slide-to="1">Pourquoi envisager un changement aussi
+                    global
+                    ?</li>
+                  <p data-target="#carousel_faq_rubrique_2" data-slide-to="1">(Et est ce vraiment nécessaire ?)</p>
+                  <li data-target="#carousel_faq_rubrique_2" data-slide-to="2">Qu'est ce que cette démarche et quelle
+                    est
+                    son but ?</li>
+                  <p data-target="#carousel_faq_rubrique_2" data-slide-to="2">(Est ce vraiment réalisable ?)</p>
+                  <li data-target="#carousel_faq_rubrique_2" data-slide-to="3">A qui s'adresse ce projet ?</li>
+                  <p data-target="#carousel_faq_rubrique_2" data-slide-to="3">(Pourquoi me concerne il ?)</p>
+                </ul>
+              </div>
+            </div>
+            <strong>
+              <h2></h2>
+            </strong>
+          </div>
+
+        </div>
+
+        <!-- TROISIEME RUBRIQUE  -->
+
+        <div id="background_3" class="row rubrique_background">
+          <h2 class="rubrique_title">Comment accomplir un projet aussi ambitieux</h2>
+          <h5>(Toute transformation consiste a faire évoluer A pour aller à B)</h5>
+          <img src="Ressource_image/player on.png" style="cursor: pointer;" alt="" data-toggle="modal"
+            data-target="#modal_demarche_global" />
+        </div>
+
+        <div id="le_pourquoi" class="row rubrique d-none d-md-flex text-center">
+
+          <div id="rubrique3_photo" class="col-lg-3"></div>
+          <div class="col-lg-9 h-100">
+            <div class="row h-100">
+
+
+              <!-- CAROUSEL FAQ RUBRIQUE 2 -->
+              <div class="col-lg-8 p-0 h-100">
+                <div id="carousel_faq_rubrique_3" class="carousel slide carousel_faq_rubrique" data-ride="carousel"
+                  style="height:100%;" data-interval="false">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel_faq_rubrique_3" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel_faq_rubrique_3" data-slide-to="1"></li>
+                    <li data-target="#carousel_faq_rubrique_3" data-slide-to="2"></li>
+                    <li data-target="#carousel_faq_rubrique_3" data-slide-to="3"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <!-- <h2 class="d-flex h-100 justify-content-center align-items-center flex-column">TOUT A UNE CAUSE | TOUT A UNE ORIGINE</h2> -->
+                      <div class="content">
+                        <h2>Reponse 1</h2>
+                      </div>
+
+
+                    </div>
+                    <div class="carousel-item">
+                      <div class="content">
+                        <h2>Reponse 2</h2>
+                      </div>
+
+                    </div>
+                    <div class="carousel-item">
+                      <div class="content">
+                        <h2>Reponse 3</h2>
+                      </div>
+
+                    </div>
+                    <div class="carousel-item">
+                      <div class="content">
+                        <h2>Reponse 4</h2>
+                      </div>
+                    </div>
+
+
+
+
+                  </div>
+                </div><!-- carousel end-->
+              </div>
+              <div class="col-lg-4 h-100 rubrique_question" style="box-shadow: black 0 0 10px;">
+                <ul>
+                  <li data-target="#carousel_faq_rubrique_3" data-slide-to="0">Question 1</li>
+                  <p data-target="#carousel_faq_rubrique_3" data-slide-to="0">(question1)</p>
+                  <li data-target="#carousel_faq_rubrique_3" data-slide-to="1">Question 2</li>
+                  <p data-target="#carousel_faq_rubrique_3" data-slide-to="1">(question2)</p>
+                  <li data-target="#carousel_faq_rubrique_3" data-slide-to="2">Question 3</li>
+                  <p data-target="#carousel_faq_rubrique_3" data-slide-to="2">(question3)</p>
+                  <li data-target="#carousel_faq_rubrique_3" data-slide-to="3">Question 4</li>
+                  <p data-target="#carousel_faq_rubrique_3" data-slide-to="3">(question4)</p>
+                </ul>
+              </div>
+            </div>
+            <strong>
+              <h2></h2>
+            </strong>
+          </div>
+
+        </div>
+
+        <!-- QUATRIEME RUBRIQUE  -->
+        <div id="background_4" class="row rubrique_background">
+          <h2 class="rubrique_title">Quel moyen pour s'en sortir</h2>
+          <h5>(Des moyens simples , facile , efficaces , sans efforts)</h5>
+          <img src="Ressource_image/player on.png" style="cursor: pointer;" alt="" data-toggle="modal"
+            data-target="#modal_demarche_global" />
+        </div>
+
+        <div id="le_pourquoi" class="row rubrique d-none d-md-flex text-center">
+
+          <div id="rubrique4_photo" class="col-lg-3"></div>
+          <div class="col-lg-9 h-100">
+            <div class="row h-100">
+
+
+              <!-- CAROUSEL FAQ RUBRIQUE 2 -->
+              <div class="col-lg-8 p-0 h-100">
+                <div id="carousel_faq_rubrique_4" class="carousel slide carousel_faq_rubrique" data-ride="carousel"
+                  style="height:100%;" data-interval="false">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel_faq_rubrique_4" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel_faq_rubrique_4" data-slide-to="1"></li>
+                    <li data-target="#carousel_faq_rubrique_4" data-slide-to="2"></li>
+                    <li data-target="#carousel_faq_rubrique_4" data-slide-to="3"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <!-- <h2 class="d-flex h-100 justify-content-center align-items-center flex-column">TOUT A UNE CAUSE | TOUT A UNE ORIGINE</h2> -->
+                      <div class="content">
+                        <h2>Reponse 1</h2>
+                      </div>
+
+
+                    </div>
+                    <div class="carousel-item">
+                      <div class="content">
+                        <h2>Reponse 2</h2>
+                      </div>
+
+                    </div>
+                    <div class="carousel-item">
+                      <div class="content">
+                        <h2>Reponse 3</h2>
+                      </div>
+
+                    </div>
+                    <div class="carousel-item">
+                      <div class="content">
+                        <h2>Reponse 4</h2>
+                      </div>
+                    </div>
+
+
+
+
+                  </div>
+                </div><!-- carousel end-->
+              </div>
+              <div class="col-lg-4 h-100 rubrique_question" style="box-shadow: black 0 0 10px;">
+                <ul>
+                  <li data-target="#carousel_faq_rubrique_4" data-slide-to="0">Question 1</li>
+                  <p data-target="#carousel_faq_rubrique_4" data-slide-to="0">(question1)</p>
+                  <li data-target="#carousel_faq_rubrique_4" data-slide-to="1">Question 2</li>
+                  <p data-target="#carousel_faq_rubrique_4" data-slide-to="1">(question2</p>
+                  <li data-target="#carousel_faq_rubrique_4" data-slide-to="2">Question 3</li>
+                  <p data-target="#carousel_faq_rubrique_4" data-slide-to="2">(question3)</p>
+                  <li data-target="#carousel_faq_rubrique_4" data-slide-to="3">Question 4</li>
+                  <p data-target="#carousel_faq_rubrique_4" data-slide-to="3">(qusetion4)</p>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <footer>
+      <div class="container h-100">
+        <div class="row h-75">
+          <div class="col-lg-3">CONTACT : </div>
+          <div class="col-lg-3">MENTION LEGAL : </div>
+          <div class="col-lg-3">CREDIT : </div>
+          <div class="col-lg-3"><button class="btn btn-block" type="button" data-toggle="modal"
+              data-target="#modal_explain"><span class="oi oi-share"></span> En Savoir plus !</button></div>
+        </div>
+        <div class="row h-25 ">
+          <div class="col-lg-12 text-center">
+            <h5 class=>Un site internet créé par Mathieu Ferrini : <br> <img src="Ressource_image/Copyright.png"
+                height="30px" width="30px" alt="Copyright"> Tout droit reservé !</h5>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+    <!-- Modal -->
+
+    <div class="modal fade" id="modal_demarche_global" tabindex="-1" role="dialog"
+      aria-labelledby="modal_demarche_global" aria-hidden="true" style="z-index: 9999;text-align: center;"
+      style="border: none;">
+      <div class="modal-dialog" role="document" style="border: none;">
+        <div class="modal-content" id="bootstrap_modified" style="border: none;">
+
+          <div class="modal-body" style="border: none;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            Une vidéo ici très bientôt
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal_explain" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true" style="z-index: 9999;text-align: center;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Plus de PRECISION ?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Des informations très vagues , une defintion très global , des propos un peu flou ? malgré ça vous voulez en
+            savoir plus ?
+            l'auteur est conscient de tout ça . et ceci n'est en effet la que pour poser un cadre très général, afin de
+            commencer à définir un projet d'une grande compléxité
+            Bientôt + infos :
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Retour</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
+
+
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <scrip src="Ressource_code/aos-master/aos-master/dist/aos.js">
+
+      <script> // JQUERY
+        $('#sommaire_spoiler1').click(function () {
+          $("#sommaire_text1").slideToggle();
+          $(this).toggleClass('oi-arrow-circle-bottom');
+          $(this).toggleClass('oi-arrow-circle-top');
+        })
+        $('#sommaire_spoiler2').click(function () {
+          $("#sommaire_text2").slideToggle();
+          $(this).toggleClass('oi-arrow-circle-bottom');
+          $(this).toggleClass('oi-arrow-circle-top');
+        })
+        $('#sommaire_spoiler3').click(function () {
+          $("#sommaire_text3").slideToggle();
+          $(this).toggleClass('oi-arrow-circle-bottom');
+          $(this).toggleClass('oi-arrow-circle-top');
+        })
+        $('#sommaire_spoiler4').click(function () {
+          $("#sommaire_text4").slideToggle();
+          $(this).toggleClass('oi-arrow-circle-bottom');
+          $(this).toggleClass('oi-arrow-circle-top');
+        })
+
+
+      // $(document).ready(function () {
+      //   $("#toggle_hanoi_screen").click(function () {
+
+      //     $("#hanoi_screen").slideToggle();
+      //     $("#hanoi_screen").css('display', "flex");
+      //   })
+      // })
+      </script>
+
+      <!-- FONCTION listner pour racourci -->
+      <!-- <script>
+
+      document.addEventListener('keypress', toggle_bonus);
+
+
+      function toggle_bonus(event) {
+
+        if (event.ctrlKey && event.altKey && event.keyCode == 'B'.charCodeAt(0)) {
+
+          alert("Attention mode secret activé");
+          // document.getElementById("navbarDropdown2").innerHTML = "alphonse"
+          document.getElementById("navbarDropdown2").classList.remove('d-none')
+        }
+        // document.getElementById("bonus").innerHTML = "ça marche";
+
+
+
+      }
+
+      function init_grid(nb_items) {
+        var game_grid = { "green": Array(nb_items), "yellow": Array(nb_items), "red": Array(nb_items) };
+        return game_grid
+      }
+
+      function insert_position_grid(tableau, nb_items, limit) {
+        // Cette fonction prend en entré une hauteur , le nombre d'éléments par colonne elle divise ce nombre par la hauteur et insère 
+        // Toute les valeurs dans la grille de TOUTE les colonnes du tableau rentré en paramètre 
+        console.log(limit / nb_items);
+        var i = 0
+        for (var key in tableau) {
+          for (var i = 0;) {
+            tableau[key2] = 10
+          }
+        }
+        return tableau;
+      }
+
+
+      function init_game() {
+
+        var vert = 94, jaune = 250, rouge = 409, origin = 328, limit = 130;
+        var can_width = 600, can_height = 400;
+        var nb_items = 3;
+
+        var game_grid = init_grid(nb_items);
+        game_grid = insert_position_grid(game_grid, nb_items, limit);
+
+
+        console.log(game_grid);
+        var can = document.getElementById("main_windows_game");
+        ctxt = can.getContext("2d");
+
+        var img = new Image();
+        img.src = "Ressource_image/ring_min.png";
+        img.onload = function () {
+          ctxt.drawImage(img, 409, 130);
+        }
+
+
+        // document.getElementById(main_windows_game)
+      }
+      // TOUR HANOI COMMANDE 
+      function move_right() {
+
+      }
+    </script> -->
+</body>
+
+</html>

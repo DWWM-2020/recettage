@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="Design.css">
+    <link type="text/css" rel="stylesheet" href="FM_ps_d_ou_on_part.css">
+    <link rel="stylesheet" type="text/css"
+        href="Ressource_icone/open-iconic-master/open-iconic-master/font/css/open-iconic-bootstrap.css">
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var next = 1, previous = 1, nb_diapo = 3, list_titre_1 = ["L'environnement Naturel", "Les inégalités", "Les violences"], nb_diapo_ligne1 = 3, list_img_diapo_ligne1 = ['Ressource_image/deforestation-405749_1920.jpg', 'Ressource_image/rhino-lying-on-ground-near-tree-1145513.jpg', 'Ressource_image/décharge.jpeg'], list_img_diapo_ligne2 = ['Ressource_image/inegalité_eau_potable.jpg', 'Ressource_image/homeless-845752_1920.jpg', 'Ressource_image/ecrase.jpg'], list_img_diapo_ligne3 = ['Ressource_image/animal-mutile.jpg', 'Ressource_image/sebrenis_memorial.jpg', 'Ressource_image/esclavage.jpg'];
+            $("#toggler").click(function () {
+                $("#aside").hide();
+                $("#ou").fadeToggle("slow");
+                $("#last_phrase").hide();
+                if ($(this).text() == "Cacher") {
+                    $(this).text("Révéler");
+                } else {
+                    $(this).text("Cacher");
+                }
+
+                $("#toggler").hide();
+                $("#diapositive-ligne1-1").animate({
+                    height: "75%",
+                    width: "75%",
+                    opacity: "1",
+                    left: "0"
+                }, 3000, function () {
+                    $("#diapo1_1 *").css("display", "flex");
+                })
+
+
+            });
+            var a= 0
+            $("#home").click(function(){
+                $("#aside").slideToggle();
+                
+                if (a == 0){
+                    $("#home").html('<span class="oi oi-minus"></span>');
+                    a = 1
+                }else{
+                    $("#home").html('<span class="oi oi-home"></span>');
+                    a = 0
+                }
+               
+                
+                })
+            
+            $(".ligne_diapositive").on({
+                mouseenter: function () {
+                    $(this).animate({
+                        height: "+=20px",
+                        width: "+=20px",
+                    });
+                },
+                mouseleave: function () {
+                    $(this).animate({
+                        height: "-=20px",
+                        width: "-=20px"
+                    });
+                }
+            });
+
+            //BOUTON LIGNE 1 CHANGER DIAPO
+
+            var i1 = 0;
+            $("#command_ligne_1_next").click(function () {
+                if (i1 < (list_img_diapo_ligne1.length - 1)) {
+                    i1 = i1 + 1;
+                    // $("#img-fond-ligne1").css("opacity", "0")
+                    // $("#diapositive-ligne1-1").css("opacity", "0");
+                    $("#img-fond-ligne1").attr("src", list_img_diapo_ligne1[i1]);
+                    $("#diapositive-ligne1-1").css("backgroundImage", "url(" + list_img_diapo_ligne1[i1] + ")");
+                    // $("#img-fond-ligne1").animate({
+                    //     opacity : '1'
+                    // }, 1000)
+                    // $("#diapositive-ligne1-1").animate({
+                    //     opacity : '1'
+                    // }, 1000)
+
+
+                } else {
+                    i1 = 0;
+                    $("#img-fond-ligne1").attr("src", list_img_diapo_ligne1[i1]);
+                    $("#diapositive-ligne1-1").css("backgroundImage", "url(" + list_img_diapo_ligne1[i1] + ")");
+                }
+
+            });
+
+            $("#command_ligne_1_previous").click(function () {
+                if (i1 > 0) {
+                    i1 = i1 - 1;
+                    $("#img-fond-ligne1").attr("src", list_img_diapo_ligne1[i1]);
+                    $("#diapositive-ligne1-1").css("backgroundImage", "url(" + list_img_diapo_ligne1[i1] + ")");
+                } else {
+                    i1 = (list_img_diapo_ligne1.length - 1)
+                    $("#img-fond-ligne1").attr("src", list_img_diapo_ligne1[i1]);
+                    $("#diapositive-ligne1-1").css("backgroundImage", "url(" + list_img_diapo_ligne1[i1] + ")");
+                }
+
+
+            });
+
+            // BOUTON LIGNE 2 CHANGER DIAPO
+
+            var i2 = 0;
+            $("#command_ligne_2_next").click(function () {
+
+                if (i2 < (list_img_diapo_ligne2.length - 1)) {
+                    i2 = i2 + 1;
+                    // $("#img-fond-ligne1").css("opacity", "0")
+                    // $("#diapositive-ligne1-1").css("opacity", "0");
+                    $("#img-fond-ligne2").attr("src", list_img_diapo_ligne2[i2]);
+                    $("#diapositive-ligne2-2").css("backgroundImage", "url(" + list_img_diapo_ligne2[i2] + ")");
+                    // $("#img-fond-ligne1").animate({
+                    //     opacity : '1'
+                    // }, 1000)
+                    // $("#diapositive-ligne1-1").animate({
+                    //     opacity : '1'
+                    // }, 1000)
+
+
+                } else {
+                    i2 = 0;
+                    $("#img-fond-ligne2").attr("src", list_img_diapo_ligne2[i2]);
+                    $("#diapositive-ligne2-2").css("backgroundImage", "url(" + list_img_diapo_ligne2[i2] + ")");
+                }
+
+            });
+
+            $("#command_ligne_2_previous").click(function () {
+
+                if (i2 > 0) {
+                    i2 = i2 - 1;
+                    $("#img-fond-ligne2").attr("src", list_img_diapo_ligne2[i2]);
+                    $("#diapositive-ligne2-2").css("backgroundImage", "url(" + list_img_diapo_ligne2[i2] + ")");
+                } else {
+                    i2 = (list_img_diapo_ligne2.length - 1)
+                    $("#img-fond-ligne2").attr("src", list_img_diapo_ligne2[i2]);
+                    $("#diapositive-ligne2-2").css("backgroundImage", "url(" + list_img_diapo_ligne2[i2] + ")");
+                }
+
+
+            });
+
+            // BOUTON LIGNE 3 CHANGER DIAPO
+
+            var i3 = 0;
+            $("#command_ligne_3_next").click(function () {
+
+                if (i3 < (list_img_diapo_ligne3.length - 1)) {
+                    i3 = i3 + 1;
+                    // $("#img-fond-ligne1").css("opacity", "0")
+                    // $("#diapositive-ligne1-1").css("opacity", "0");
+                    $("#img-fond-ligne3").attr("src", list_img_diapo_ligne3[i3]);
+                    $("#diapositive-ligne3-3").css("backgroundImage", "url(" + list_img_diapo_ligne3[i3] + ")");
+                    // $("#img-fond-ligne1").animate({
+                    //     opacity : '1'
+                    // }, 1000)
+                    // $("#diapositive-ligne1-1").animate({
+                    //     opacity : '1'
+                    // }, 1000)
+
+
+                } else {
+                    i3 = 0;
+                    $("#img-fond-ligne3").attr("src", list_img_diapo_ligne3[i3]);
+                    $("#diapositive-ligne3-3").css("backgroundImage", "url(" + list_img_diapo_ligne3[i3] + ")");
+                }
+
+            });
+
+            $("#command_ligne_3_previous").click(function () {
+
+                if (i3 > 0) {
+                    i3 = i3 - 1;
+                    $("#img-fond-ligne3").attr("src", list_img_diapo_ligne3[i3]);
+                    $("#diapositive-ligne3-3").css("backgroundImage", "url(" + list_img_diapo_ligne3[i3] + ")");
+                } else {
+                    i3 = (list_img_diapo_ligne3.length - 1)
+                    $("#img-fond-ligne3").attr("src", list_img_diapo_ligne3[i3]);
+                    $("#diapositive-ligne3-3").css("backgroundImage", "url(" + list_img_diapo_ligne3[i3] + ")");
+                }
+
+
+            });
+
+            // FONCTION DES BOUTONS NEXT ET PREVIOUS 
+            var i = 0;
+            $("#btn-right").mouseup(function () {
+                if (next < nb_diapo) {
+                    next += 1, previous += 1;
+                    var path_next = "#ligne" + next.toString();
+                    var path_previous = "#ligne" + previous.toString();
+                    $(this).attr("href", path_next);
+                    $("#btn-left").attr("href", path_previous);
+
+                }
+                if (i < (nb_diapo - 1)) {
+                    i = i + 1;
+                    $("#titre_ligne").text(list_titre_1[i])
+                }
+            });
+            $("#btn-left").mouseup(function () {
+                if (previous > 1) {
+                    next -= 1, previous -= 1;
+                    var path_next = "#ligne" + next.toString()
+                    var path_previous = "#ligne" + previous.toString()
+                    $(this).attr("href", path_previous)
+                    $("#btn-right").attr("href", path_next)
+                }
+                if (i > 0) {
+                    i = i - 1;
+                    $("#titre_ligne").text(list_titre_1[i])
+                }
+            });
+
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <!--     
+    <table><tr><td>Emissions mondiales de tetrachlorure de carbone </td><td><div id="nombre_tonne_co2" class="en_tete" style="font-size: larger;text-align: center;margin:auto;">24.5555</div></td>
+    <td id="test">Kilos/s</td></tr></table>
+    <button type="button" onclick="increment('nombre_tonne_co2',1.24)">Ajouter</button> -->
+    <div class="container-fluid">
+        <div class="row justify-content-center" style="height:100vh;">
+            <div id="aside" class="col-lg-3 border" style="max-height: 100vh;padding:0;">
+                <div class="speech_container">
+                    <h2 class="main_title ">D'ou est ce qu'on part ?</h2>
+                    <div id="intro">
+                        <h1>LE MONDE EST IL PARFAIT ?</h1>
+                        <p> Pour avancer il faut passer par la pleine <strong>acceptation et
+                                constation de la réalité .</strong><br><br><span
+                                style="font-style: italic;font-size: larger;">Puis</span></p>
+
+
+                    </div>
+                    <ul>
+                        <li>Sans la
+                            voir comme une fatalité</li>
+                        <li>Ni se résigner</li>
+                        <li>Sans céder à la peur ni au défaitisme</li>
+                        <li>Ni se sentir accablé</li>
+                    </ul>
+                    <p><span id="last_phrase">Il faut <em>faire jaillir l'espoir d'un monde meilleurs</span><br><br>
+                        <span id="toggler">Voir des faits</span></em></p>
+                    <div class="container-fluid">
+                        <div class="row" style="">
+                            <div class="col-md-6" style="padding:0"> <a href="FM_ps_vers_un_monde_meilleur.html"><button
+                                        class="btn btn-light btn-block">Menu principal</button></a></div>
+                            <div class="col-md-6" style="padding:0"><a href="FM_ps_ou_allons_nous.html"><button
+                                        class="btn btn-light btn-block">Pour aller ou ?</button></a></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- FIN COLONNE GAUCHE -->
+
+            <div id="ou" class="col-lg h-100 " style="overflow-y: scroll;padding: 0;">
+                <!-- BARRE DE TITRE  -->
+                <div class="main_title header_diapo sticky-top">
+                    <div class="control_panel">
+                        <button class="btn control-button" id="home" style="padding: 3px;"><span class="oi oi-home"></span></button>
+
+                        <a href="#ligne1" id="btn-left"><button class="btn control-button"><span
+                                    class="oi oi-arrow-thick-top"></span><div class="d-none d-md-block">Précedent</div></button></a>
+
+                        <a href="#ligne2" id="btn-right"><button class="btn control-button"><span
+                                    class="oi oi-arrow-thick-bottom"></span><div class="d-none d-md-block">Suivant</div></button></a>
+
+                    </div>
+                    <div class="title_panel">
+                        <h2 id="titre_ligne">L'environnement Naturel</h2>
+                        <p id="compteur"></p>
+                    </div>
+                </div><!-- FIN BARRE DE TITRE  -->
+
+                <!-- LIGNE 1 -->
+
+                <div class="ligne" id="ligne1">
+                    <img id="img-fond-ligne1" src="Ressource_image/deforestation-405749_1920.jpg ">
+                    <div id="diapositive-ligne1-1" class="ligne_diapositive shrink-content">
+                        <div class="carousel-container">
+
+
+                            <div id="carousel_ligne_1" class="carousel_index carousel slide" data-ride="carousel"
+                                data-interval="false">
+                                <ol class="carousel-indicators">
+                                    <!-- <li data-target="#carousel_ligne_1" data-slide-to="0" class="active"></li> -->
+                                    <!-- <li data-target="#carousel_ligne_1" data-slide-to="1"></li> -->
+
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div id="diapo1_1" class="carousel-item active">
+                                        <div class="diapo">
+                                            <h1>Ca donne à réfléchir : </h1>
+                                            <h5 style="font-style: italic;">La Terre est agée de 4,6 milliards
+                                                d'années.<br>Ramenons ça à 46 ans.
+                                                Nous sommes là depuis 4 heures.<br> Notre révolution industrielle a
+                                                commencé
+                                                il y a une minute.</span></h5>
+                                            <h5 style="font-weight: bold;">Dans cet intervalle, nous avons détruit plus
+                                                de 50% des forêts de la
+                                                planète.</h5>
+
+                                        </div>
+                                    </div>
+
+                                    <div id="diapo1_2" class="carousel-item">
+                                        <div class="diapo">
+                                            <h1 style="color:white;">1 espèce animale ou végétale sur 8 est menacée
+                                                d’extinction imminente </h1>
+                                            <div class="carousel-caption">
+
+                                                <h5>La cause principale est la destruction des écosystèmes et des
+                                                    habitats des espèces animales.</h5>
+                                                <h5 class="d-none d-md-block"> La plate-forme intergouvernementale (IPBES)
+                                                    a tiré la sonnette d'alarme le 6 mai 2019 . Elle estime à un
+                                                    million (1 sur 8) le nombre d'espèces qui risquent de disparaître
+                                                    sous peu. </h5>
+
+                                                <a
+                                                    href="https://photo.neonmag.fr/17-chiffres-terrifiants-sur-la-crise-ecologique-35592#1-espece-animale-ou-vegetale-sur-8-est-menacee-d-extinction-imminente-617256">source
+                                                    : </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="diapo1_3" class="carousel-item">
+                                        <div class="diapo">
+                                            <h1>Le monde produirait 2,01 milliard de
+                                                tonnes de déchet par an</h1>
+                                            <div class="carousel-caption">
+
+                                                <h5  class="d-none d-md-block"><br><br><span style="text-decoration: underline;font-weight: bold;"> 33% ne seraient
+                                                        pas traités correctement.</span><br><br></h5>
+                                                <h5  class="d-none d-md-block">
+                                                    Un chiffre qui va aller
+                                                    en grandissant dans les années qui viennent, à cause de
+                                                    l’augmentation de la population et de l’occidentalisation de nos
+                                                    modes de vie.
+                                                </h5>
+                                       
+                                                <h5 >le monde a produit en 2016, 242 millions de tonnes de déchets
+                                                    plastique !On estime que seuls 9 % du plastique produit est recyclé
+                                                    dans le monde
+                                                </h5>
+                                                <a href="https://www.consoglobe.com/recyclage-dans-le-monde-cg#source1">Source
+                                                    : </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+
+                            </div>
+                            <a class="carousel_control carousel-control-prev" href="#carousel_ligne_1" role="button"
+                                data-slide="prev" id="command_ligne_1_previous">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a id="command_ligne_1_next" class="carousel_control carousel-control-next"
+                                href="#carousel_ligne_1" role="button" data-slide="next">
+                                <span class=" carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--FIN DE LIGNE-->
+
+                <!-- LIGNE 2 -->
+
+                <div class="ligne" id="ligne2">
+                    <img id="img-fond-ligne2" src="Ressource_image/inegalité_eau_potable.jpg">
+                    <div id="diapositive-ligne2-2" class="ligne_diapositive shrink-content">
+                        <div class="carousel-container">
+
+
+                            <div id="carousel_ligne_2" class="carousel_index carousel slide" data-ride="carousel"
+                                data-interval="false">
+                                <ol class="carousel-indicators">
+                                    <!-- <li data-target="#carousel_ligne_1" data-slide-to="0" class="active"></li> -->
+                                    <!-- <li data-target="#carousel_ligne_1" data-slide-to="1"></li> -->
+
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div id="diapo2_1" class="carousel-item active">
+                                        <div class="diapo">
+                                            <h1>11 % de la population mondiale n’a pas
+                                                accès à l’eau potable</h1>
+                                            <h5>Soit près d'un milliard de personnes</h5>
+                                            <h5 class="d-none d-md-block">ceux qui n’y ont pas accès sur place sont
+                                                forcés de consacrer une grande
+                                                part de leur temps et de leur énergie à s’approvisionner, en se
+                                                déplaçant vers des sources aléatoires et dont la qualité est mal
+                                                contrôlée</h5>
+                                            <h5 class="d-none d-md-block">l’eau souillée est l’un des vecteurs majeurs
+                                                des maladies qui font le
+                                                plus de morts sur la planète,
+                                            </h5>
+                                            <a href="https://www.inegalites.fr/L-acces-a-l-eau-potable-dans-le-monde">source
+                                                : </a>
+
+                                        </div>
+                                    </div>
+
+                                    <div id="diapo2_2" class="carousel-item">
+                                        <div class="diapo">
+                                            <h1 style="color:white;">200 000 sdf estimé en france</h1>
+
+
+                                            <h5>25% serait des mineurs ...</h5>
+                                            <h5>maladie , érance , solitidue , alcoolisme , regard des autres ,
+                                                désespoir, usure.<br>
+                                                L'éxclusion morbide est le reflet de la volonté indubitable pour le
+                                                sytème actuel de chercher l'absolu monopole , ce qui ne rentre pas
+                                                dedans se meurt lentement.
+                                            </h5>
+                                            <a
+                                                href="https://www.ledauphine.com/france-monde/2019/08/06/les-sdf-et-sans-abri-vivent-(et-meurent)-aussi-pendant-l-ete">source
+                                                : </a>
+                                        </div>
+                                    </div>
+                                    <div id="diapo2.3" class="carousel-item ">
+                                        <div class="diapo">
+                                            <h1 style="color:white;">Des écarts de richesses qui donnent le
+                                                vertige</h1>
+
+
+                                            <h5 class="d-none d-md-block">La richesse des 1% les plus riches de la planète correspond à plus de
+                                                fois la richesse de 90 % de la population mondiale, soit 6,9 milliards
+                                                de personnes.</h5>
+                                            <h5> près de la moitié de la population mondiale, soit près de 3,8 milliards
+                                                de personnes, vit toujours avec moins de 5 dollars par jour.
+                                            </h5>
+
+                                            <h5>Dans le monde, les hommes détiennent 50 % de richesses en plus que les
+                                                femmes.</h5>
+
+                                            <h5 class="d-none d-md-block">En France, 7 milliardaires possèdent plus que les 30 % les plus pauvres,
+                                                ils étaient 8 l’année dernière.</h5>
+                                            <a href="https://www.oxfamfrance.org/rapports/celles-qui-comptent/">source :
+                                            </a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+
+                            </div>
+                            <a class="carousel_control carousel-control-prev" href="#carousel_ligne_2" role="button"
+                                data-slide="prev" id="command_ligne_2_previous">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a id="command_ligne_2_next" class="carousel_control carousel-control-next"
+                                href="#carousel_ligne_2" role="button" data-slide="next">
+                                <span class=" carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--FIN DE LIGNE-->
+
+                <!-- LIGNE 3 -->
+
+                <div class="ligne" id="ligne3">
+                    <img id="img-fond-ligne3" src="Ressource_image/animal-mutile.jpg">
+                    <div id="diapositive-ligne3-3" class="ligne_diapositive shrink-content">
+                        <div class="carousel-container">
+
+
+                            <div id="carousel_ligne_3" class="carousel_index carousel slide" data-ride="carousel"
+                                data-interval="false">
+                                <ol class="carousel-indicators">
+                                    <!-- <li data-target="#carousel_ligne_1" data-slide-to="0" class="active"></li> -->
+                                    <!-- <li data-target="#carousel_ligne_1" data-slide-to="1"></li> -->
+
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div id="diapo3_1" class="carousel-item active">
+                                        <div class="diapo">
+                                            <h1>Chaque année en France</h1>
+                                            <h5>40 millions de poussins sont broyés par les couvoirs (soit 1 poussin par
+                                                seconde).</h5>
+                                            <h5>3 000 chiens sont utilisés et sacrifiés par les chercheurs français.
+                                            </h5>
+                                            <h5 class="d-none d-md-block">100 000 animaux sont abandonnés (dont 60 000 l’été).</h5>
+                                            <h5 class="d-none d-md-block">3 millions d’animaux sont tués dans les abattoirs quotidiennement.</h5>
+                                            <h5 class="d-none d-md-block">Chaque année, dans le monde… : 65 milliards d’animaux sont tués pour
+                                                notre alimentation.
+                                            </h5>
+                                            <h5>33,6 millions de poules sont élevés en batterie.</h5>
+                                            <h5>0,6 m² est la taille de la cage de vie des renards et des visons élevés
+                                                pour la fourrure.</h5>
+                                            <a href="https://www.ffpanimale.fr/la-protection-animale-en-chiffres/">source
+                                                : </a>
+
+                                        </div>
+                                    </div>
+
+                                    <div id="diapo3_2" class="carousel-item">
+                                        <div class="diapo">
+                                            <h1>L'histoire de l'humanité marqué par d'ignobles
+                                                violences</h1>
+
+
+                                            <h5>Le génocide arménien (1915 – 1918)<br>à tué 1 200 000 Arméniens
+                                                d’Anatolie et d’Arménie Occidentale</h5>
+                                            <h5 class="d-none d-md-block">La Shoah ou le génocide juif (1939 – 1945)<br>500 000 à 750 000 morts
+                                                représentant environ 70 % de la population assyrienne de l’époque.</h5>
+                                            <h5 class="d-none d-md-block">Le génocide kurde (Février – Septembre 1988)<br>182 000 civils ont été
+                                                tués et plus de 2 000 villages détruits. Pour Human Rights Watch, 90 %
+                                                des villages de la région cible ont été rayés de la carte et 1 754
+                                                écoles et 270 hôpitaux détruits.</h5>
+                                            <h5 class="d-none d-md-block">Le génocide rwandais (Avril – Juillet 1994)<br>L’ONU estime qu’environ
+                                                800 000 Rwandais, en majorité Tutsis, ont perdu la vie durant ces trois
+                                                mois.</h5>
+                                            <a
+                                                href="http://www.midi-madagasikara.mg/dossiers/2017/07/03/les-crimes-de-genocide-ayant-marque-lhistoire">source
+                                                : </a>
+                                        </div>
+                                    </div>
+                                    <div id="diapo3.3" class="carousel-item ">
+                                        <div class="diapo">
+                                            <h1>Esclavage MODERNE : 40 millions de cas
+                                                dans le monde</h1>
+
+
+                                            <h5>Exploitation</h5>
+                                            <h5>Sexuelle , par le travail, esclavage domestique, mendicité ou vol forcé
+                                                , servitude pour dettes , trafic d'organe</h5>
+
+                                            <h5 class="d-none d-md-block">Les chiffres établis par l'historien Olivier Pétré-Grenouilleau portent
+                                                à 14 millions le nombre d'Africains réduits en esclavage dans le cadre
+                                                de la traite intra-africaine.</h5>
+
+
+                                            <a
+                                                href="https://www.leparisien.fr/international/esclavage-moderne-40-millions-de-cas-dans-le-monde-24-11-2017-7413477.php">source
+                                                :
+                                            </a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+
+                            </div>
+                            <a class="carousel_control carousel-control-prev" href="#carousel_ligne_3" role="button"
+                                data-slide="prev" id="command_ligne_3_previous">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a id="command_ligne_3_next" class="carousel_control carousel-control-next"
+                                href="#carousel_ligne_3" role="button" data-slide="next">
+                                <span class=" carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div> <!-- FIN COLONNE DROITE -->
+        </div>
+    </div>
+
+
+    <script>
+
+        function increment() {
+            var objet = document.getElementById(id);
+            // objet.innerHTML = parseFloat(objet.innerHTML) + amount;
+            $1 = parseFloat(objet.innerHTML).toFixed(2);
+            objet.innerHTML = parseFloat($1) + 1.2;
+        }
+
+        setInterval(increment(), 1000);
+
+
+
+    </script>
+
+
+    <script src="Ressource_code/aos-master/os-master/dist/aos.js">$(document).ready(function () {
+            $("button").click(function () {
+                $("p").hide();
+            });
+        });</script>
+
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>

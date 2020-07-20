@@ -1,0 +1,318 @@
+
+/* bootstrap */
+.row_ {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-sm-4_,
+.col-sm-8_,
+.col-sm-12_ {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media screen and (max-width:991px) {
+    .order-md-2 {
+        order: 2 !important;
+    }
+
+    .order-md-1 {
+        order: 1 !important;
+    }
+
+    .order-md-3 {
+        order: 3 !important;
+    }
+}
+
+.drop_ {
+    position: relative;
+}
+
+.col-sm-4_ {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+.col-sm-12_ {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.col-sm-8_ {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+}
+
+/* autre */
+
+.row_ {
+    margin: 0;
+}
+
+.col-sm-4_,
+.col-sm-8_,
+.col-sm-12_ {
+    padding: 0 !important;
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+[data-target]:not(:disabled) {
+    cursor: pointer;
+    font-family: revert;
+}
+
+a:hover {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+/* PASSION */
+.passion_deroulante {
+    margin: auto;
+    animation: moveleft 5s cubic-bezier(.18, .89, .32, 1.28) both;
+    animation-delay: 4s;
+    opacity: 0;
+}
+
+.passion_deroulante a {
+    color: white;
+    text-decoration: none;
+}
+
+.passion_deroulante button {
+    background-color: #535151;
+    color: white;
+    padding: 1vw 2vw;
+    font-size: 2.2vw;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.passion_adrien {
+    position: absolute;
+    right: -4vw;
+    top: -2.1vw;
+    background-color: orange;
+    color: white;
+    padding: 0.5vw;
+    font-size: 1.9vw;
+    font-family: 'Fira Sans Extra Condensed', sans-serif !important;
+
+}
+
+.passion_aurelien {
+    position: absolute;
+    right: 1vw;
+    top: -2.1vw;
+    background-color: orange;
+    color: white;
+    padding: 0.5vw;
+    font-size: 1.9vw;
+    font-family: 'Fira Sans Extra Condensed', sans-serif !important;
+
+}
+
+.passion_bilal {
+    position: absolute;
+    right: 2vw;
+    top: -2.1vw;
+    background-color: orange;
+    color: white;
+    padding: 0.5vw;
+    font-size: 1.9vw;
+    font-family: 'Fira Sans Extra Condensed', sans-serif !important;
+
+}
+
+.passion_jeremy {
+    position: absolute;
+    right: 5.5vw;
+    top: -2.1vw;
+    background-color: orange;
+    color: white;
+    padding: 0.5vw;
+    font-size: 1.9vw;
+    font-family: 'Fira Sans Extra Condensed', sans-serif !important;
+
+}
+
+.passion_jerome {
+    position: absolute;
+    right: -2vw;
+    top: -2.1vw;
+    background-color: orange;
+    color: white;
+    padding: 0.5vw;
+    font-size: 1.9vw;
+    font-family: 'Fira Sans Extra Condensed', sans-serif !important;
+
+}
+
+.passion_david {
+    position: absolute;
+    right: 3vw;
+    top: -2.1vw;
+    background-color: orange;
+    color: white;
+    padding: 0.5vw;
+    font-size: 1.9vw;
+    font-family: 'Fira Sans Extra Condensed', sans-serif !important;
+
+}
+
+.passion_damien {
+    position: absolute;
+    right: 6vw;
+    top: -2.1vw;
+    background-color: orange;
+    color: white;
+    padding: 0.5vw;
+    font-size: 1.9vw;
+    font-family: 'Fira Sans Extra Condensed', sans-serif !important;
+
+}
+
+.passion_kenji {
+    position: absolute;
+    right: 5.5vw;
+    top: -2.1vw;
+    background-color: orange;
+    color: white;
+    padding: 0.5vw;
+    font-size: 1.9vw;
+    font-family: 'Fira Sans Extra Condensed', sans-serif !important;
+
+}
+
+.passion_marie {
+    position: absolute;
+    right: 1vw;
+    top: -2.1vw;
+    background-color: orange;
+    color: white;
+    padding: 0.5vw;
+    font-size: 1.9vw;
+    font-family: 'Fira Sans Extra Condensed', sans-serif !important;
+
+}
+
+.passion_marnia {
+    position: absolute;
+    right: 5.5vw;
+    top: -2.1vw;
+    background-color: orange;
+    color: white;
+    padding: 0.5vw;
+    font-size: 1.9vw;
+    font-family: 'Fira Sans Extra Condensed', sans-serif !important;
+
+}
+
+.passion_mathieu {
+    position: absolute;
+    right: -4.5vw;
+    top: -3.1vw;
+    background-color: orange;
+    color: white;
+    padding: 0.5vw;
+    font-size: 1.9vw;
+    font-family: 'Fira Sans Extra Condensed', sans-serif !important;
+
+}
+
+.passion_karima {
+    position: absolute;
+    right: 8vw;
+    top: -2.1vw;
+    background-color: orange;
+    color: white;
+    padding: 0.5vw;
+    font-size: 1.9vw;
+    font-family: 'Fira Sans Extra Condensed', sans-serif !important;
+
+}
+
+/* AUTRE SUITE */
+.presentation {
+    font-size: 2.2vw;
+    text-align: justify;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.image1 {
+    height: 45%;
+    text-align: center;
+    background-color: grey;
+    background-image: url(../img/personnage.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imagehomme {
+    height: 45%;
+    text-align: center;
+    background-color: grey;
+    background-image: url(../img/homme.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.imagefemme {
+    height: 45%;
+    text-align: center;
+    background-color: grey;
+    background-image: url(../img/femme.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.image2 {
+    height: 55%;
+    background-image: url(../img/plagev2.jpg);
+    background-size: cover;
+}
+
+.image3 {
+    height: 45%;
+    background-image: url(../img/merN&B.png);
+    background-size: cover;
+}
+
+.image4 {
+    height: 55%;
+    background-image: url(../img/plage.jpg);
+    background-size: cover;
+}
+
+.image_pre {
+    width: 15%;
+}
+
+@keyframes moveleft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}

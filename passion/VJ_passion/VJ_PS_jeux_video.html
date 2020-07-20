@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pages perso</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="VJ_PS_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="container-fluid header">
+        <div class="container">
+
+            <a href="moto.html" class='logo'>Mes passions</a>
+
+            <!-- NAVIGATION HEADER -->
+            <nav class="navbar menu">
+                <a href="VJ_PS_moto.html">Moto</a>
+                <a class="active" href="VJ_PS_jeux_video.html">Jeux vidéo</a>
+                <a href="VJ_PS_amis.html">Amis</a>
+            </nav>
+
+        </div>
+    </header>
+    <!-- END HEADER -->
+
+
+    <!-- BANNER -->
+    <div class="container-fluid">
+        <div class="container banner">
+            <div class="row icon1">
+                <h1>Les jeux vidéos</h1>
+                <img src="img/controller.png" class="icon" alt="Icone moto" />
+            </div>
+            <hr class="separator">
+            <div class="container first-pic no-shadow">
+                <img src="img/vg-banner.jpg" alt='Bannière jeux video' />
+
+            </div>
+        </div>
+    </div>
+
+    <!-- END BANNER -->
+
+    <!-- SECTION ARTICLES -->
+    <div class="container-fluid">
+        <article class="container article">
+            <h2>Un des meilleurs moyens d'évasion</h2>
+            <hr class="separator">
+            <p class="col-lg-6 col-md-6 col-xs-12 col-sm-12">Les jeux vidéos sont pour moi tout un monde qui s'ouvre, ou la seule limite est l'imagination des personnes qui l'on conçu. L'arrivée d'internet a boulversé ce domaine et la façon de le percevoir en rajoutant la possibilité de rencontrer,
+                d'échanger et de partager des moments avec des inconnus à l'autre bout du monde.</p>
+        </article>
+    </div>
+
+
+    <!-- ¨PICTURES WITH DESCRIPTION POP UP -->
+    <!--
+    <section class="container-fluid main">
+        <div class="container">
+            <div class="row images">
+                <img class=" col-lg-4 col-md-4 col-xs-1 col-sm-1" src="img/link.jpg" alt="" />
+                <img class=" col-lg-4 col-md-4 col-xs-1 col-sm-1" src="img/kratos.png" alt="" />
+                <img class=" col-lg-4 col-md-4 col-xs-1 col-sm-1" src="img/a_c.jpg" alt="" />
+            </div>
+        </div>
+    </section>
+-->
+
+    <!-- CAROUSEL -->
+    <div id="CarouselJeuxVideo" class="carousel slide col-lg-7 col-md-7 col-xs-12 col-sm-12" data-interval="false" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/link.jpg" class="d-block w-100" alt="...">
+                <p class="p-carousel">The legend of zelda: breath of the wild<br> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        En savoir plus
+                    </button>
+                    <!-- MODAL WINDOW THE LEGEND OF ZELDA -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div>
+                                    <h5 class="modal-title" id="exampleModalLabel">The legend of Zelda: Breath of the wild.
+                                        <br>Un jeu qui a révolutionné le genre OPEN WORLD</h5>
+
+                                </div>
+                                <hr class="separator-modal">
+                                <div class="modal-body">
+                                    <div class="modal-body  margin-auto"><img src="img/The legend of zelda3.jpg" class="modal-image"></div>
+                                    <p>Ce jeu est paru le 3 mars 2017, et a complètement chamboulé la façon d'aborder les jeux de ce type.<br>En effet le jouer est complètement libre, aucune quête ne lui est imposé, tout cela dans un monde incroyablement
+                                        beau. L'exploration est au coeur du jeu et on se prend très vite au jeu de vouloir tout découvrir et passer des dizaines d'heures à parcourir Hyrule.</p>
+
+                                </div>
+                                <div class="mfooter">
+                                    <hr class="footer-modal-separator">
+                                    <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </p>
+            </div>
+            <div class="carousel-item" data-interval="0">
+                <img src="img/kratos.png" class="d-block w-100" alt="...">
+                <p class="p-carousel">God of war<br> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#godofwar">
+                        En savoir plus
+                    </button>
+                    <!-- MODAL WINDOW GOD OF WAR -->
+                    <div class="modal fade" id="godofwar" tabindex="-1" role="dialog" aria-labelledby="godofwarLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <div>
+                                    <h5 class="modal-title" id="godofwarLabel">GOD OF WAR<br>Une histoire au service de l'action.
+                                    </h5>
+
+                                </div>
+                                <hr class="separator-modal">
+                                <div class="modal-body">
+                                    <div class="modal-body  margin-auto"><img src="img/god of war modal.jpg" class="modal-image"></div>
+                                    <p>La série god of war commence en 2005, vous incarnez un dieu grec essayant de devenir le nouveau dieu de la guerre.Au coeur de la mythologie grecque, on se rend compte que le personnage principal, Kratos, à un passé
+                                        plein de douleurs.</p>
+                                    <hr class="separator-modal">
+                                    <p>Le 20 avril 2018, God of war fait peau neuve avec un gameplay nouveau, et une histoire beaucoup plus poussée. Vous incarnez toujours Kratos, mais dorénavant le dieu grec à décidé d'aller taquiner les dieux Nordiques
+                                        en compagnie de son fils.</p>
+
+                                </div>
+                                <div class="m-footer">
+                                    <hr class="footer-modal-separator">
+                                    <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </p>
+            </div>
+            <div class="carousel-item" data-interval="0">
+                <img src="img/a_c.jpg" class="d-block w-100" alt="...">
+                <p class="p-carousel"> Assassin's creed Odyssey<br> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ac-odyssey">
+                        En savoir plus
+                    </button>
+                    <!-- MODAL WINDOW ASSASSIN'S CREED -->
+                    <div class="modal fade" id="ac-odyssey" tabindex="-1" role="dialog" aria-labelledby="ac-odysseyLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div>
+                                    <h5 class="modal-title" id="ac-odysseyLabel">Assassin's creed<br>Une série de jeux vidéo culte
+                                    </h5>
+
+
+                                </div>
+                                <hr class="separator-modal">
+                                <div class="modal-body">
+                                    <div class="modal-body  margin-auto"><img src="img/a-c discoverytour.jpg" class="modal-image"></div>
+                                    <p>Depuis des années, la série Assassin's creed nous plonge dans des tas d'époques différentes. A l'aide d'une machine nomée l'Animus, vous pouvez revivre la vie de vos ancêtres afin de découvrir leur monde. Une dimension
+                                        fantastique vient ajouter un vrai plus, vous devrez réccupérer des artéfacts fabriqués par une civilisation maintenant éteinte et qui vous permettrez de controler le monde.</p>
+                                    <h5>Un jeu au service de l'apprentissage</h5>
+                                    <hr class="separator-modal">
+                                    <p>Lors des deux derniers opus, une option à été ajoutée pour pouvoir se ballader dans les différents mondes sous forme de visite guidée, et apprendre ludiquement toutes les spécificités des différentes civilisations.<br>                                        Certains professeurs l'utilisent même lors de leurs cours pour immerger leurs élèves dans des cours modernes. </p>
+
+                                </div>
+                                <div class="m-footer">
+                                    <hr class="footer-modal-separator">
+                                    <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Fermer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </p>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#CarouselJeuxVideo" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#CarouselJeuxVideo" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- SECTION ARTICLE -->
+    <article class="container article">
+        <div class="row icon2">
+            <h2>Un média trop souvent critiqué</h2>
+
+        </div>
+
+        <hr class="separator">
+        <p class="col-lg-6 col-md-6 col-xs-12 col-sm-12">Même si il s'est largement démocratisé,le jeu vidéo est malheureusement bien souvent critiqué par d'autres médias, l'accusant de rendre accro au même titre que le tabac ou l'alcool.<br>On ne parle que rarement de ses vertues en terme d'apprentissage,
+            en effet certains jeux retranscrisent des moments de l'histoire, nous permettant de nous plonger dans une époque bien précise. </p>
+    </article>
+    <!-- <section class="container-fluid">
+        <section class="canvas"></section>
+    </section> -->
+
+
+    <footer class="containe footer">
+        <p>&copy; FilRouge Passion 2020</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.mobile_slide {
+    width: 60vw;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    overflow: auto;
+}
+
+.mobile_slide2 {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    overflow: auto;
+}
+
+@-moz-document url-prefix() {
+    .mobile_slide {
+        width: 60vw;
+        text-align: center;
+        margin: auto;
+        display: block ruby;
+        overflow: auto;
+    }
+
+    .mobile_slide2 {
+        text-align: center;
+        margin: auto;
+        display: block ruby;
+        overflow: auto;
+    }
+}
+
+.modal-open {
+    overflow: scroll;
+}
+
+.modal_.show {
+    display: flex !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.modal_ {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    animation: fadeIn 4s both;
+    z-index: 5;
+}
+
+.exit {
+    font-size: 1vw;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
+
+.modal-wrapper {
+    background-color: white;
+    padding: 1vw 0 1vw 1vw;
+    max-height: calc(100vh - 20px);
+    animation: slideLeft 4s both;
+    border-radius: 0.7vw;
+    box-shadow: 0 -0.1vw 1.5vw -0.2vw;
+    margin-left: 8vw;
+    width: 100%;
+}
+
+.modal_[aria-hidden="true"] {
+    animation: fadeOut 4s both;
+}
+
+.modal_[aria-hidden="true"] .modal-wrapper {
+    animation: slideRight 4s both;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@media screen and (max-width:1366px) {
+    .modal-wrapper {
+        overflow: auto;
+    }
+}

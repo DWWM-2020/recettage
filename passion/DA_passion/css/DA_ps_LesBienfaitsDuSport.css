@@ -1,0 +1,213 @@
+body {
+    background-image: url(../image/LesBienfaitsDuSport/tableauvert.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-image: url(../image/LesBienfaitsDuSport/tableauvert.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+}
+
+h1 {
+    font-size: 900% !important;
+    color: white;
+    text-align: center;
+    padding-top: 15%;
+    font-family: "palace Script MT", "Alex Brush", "sofia" !important;
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 700% !important;
+    }
+}
+
+h2 {
+    font-family: "papyrus";
+    font-size: 300% !important;
+}
+
+@media screen and (max-width: 550px) {
+    h2 {
+        font-size: 200% !important;
+    }
+}
+
+.sousblock {
+    margin-bottom: 4%;
+}
+
+h4 {
+    margin-bottom: 2%;
+}
+
+
+/*--------------Navigation interne------------------*/
+
+.nav2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav2 h2 {
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    .nav2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .nav2 .psychologiques {
+        margin-top: 20px !important;
+        margin-bottom: 70px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+
+/*--------------------Images-----------------------*/
+
+.nav2 .physiques,
+.nav2 .psychologiques,
+.nav2 .sociaux {
+    width: 240px;
+    height: 120px;
+    border-radius: 20%;
+    margin-top: -50px;
+}
+
+.nav2 .psychologiques {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+/*----------------------Introduction---------------*/
+
+#Introduction {
+    width: 70%;
+    margin: auto;
+    margin-top: 6%;
+    padding: 5%;
+    background-color: rgb(192, 192, 192);
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+/*--------------------Physiques-------------------*/
+
+#Physiques {
+    width: 70%;
+    margin: auto;
+    margin-top: 6%;
+    padding: 5% 5% 1%;
+    background-color: white;
+    text-align: center;
+}
+
+#Physiques .foot {
+    width: 150px;
+    height: 200px;
+}
+
+#Physiques .fitness {
+    width: 180px;
+    height: 180px;
+}
+
+#Physiques .nageur {
+    width: 200px;
+    height: 200px;
+}
+
+
+/*--------------------Psychologiques--------------*/
+
+#Psychologiques {
+    width: 70%;
+    margin: auto;
+    margin-top: 6%;
+    padding: 5%;
+    background-color: white;
+    text-align: center;
+}
+
+#Psychologiques .zen1 {
+    width: 100%;
+}
+
+#Psychologiques .bien-être {
+    width: 70%;
+}
+
+#Psychologiques .muscle {
+    width: 200px;
+    height: 200px;
+}
+
+
+/*-----------------Sociaux-----------------------*/
+
+#Sociaux {
+    width: 70%;
+    margin: auto;
+    margin-top: 6%;
+    padding: 5%;
+    background-color: white;
+    text-align: center;
+}
+
+#Sociaux .judoka {
+    width: 200px;
+    height: 150px;
+}
+
+#Sociaux .joie {
+    width: 200px;
+    height: 200px;
+}
+
+
+/*--------------------Conseils-------------------*/
+
+#Conseils {
+    width: 70%;
+    margin: auto;
+    margin-top: 6%;
+    margin-bottom: 3%;
+    padding: 5%;
+    background-color: rgb(192, 192, 192);
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+/*-----------------footer--------------------*/
+
+footer {
+    margin-top: 4%;
+    height: 200px;
+    background-image: url(../image/LesBienfaitsDuSport/footersport2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 70px;
+}
+
+.fondcontact {
+    text-align: center;
+}
+
+.fondcontact a:link {
+    color: rgb(3, 55, 90);
+}

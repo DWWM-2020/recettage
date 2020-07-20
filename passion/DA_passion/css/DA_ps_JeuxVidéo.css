@@ -1,0 +1,276 @@
+body {
+    background-color: #417781 !important;
+    overflow-x: hidden;
+}
+
+.divvidéo {
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.vidéo1 {
+    width: 80%;
+}
+
+
+/*----------------------header------------------------------*/
+
+header img {
+    width: 100%;
+}
+
+
+/*---------------------------OGAME------------*/
+
+#OGAME {
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: justify;
+    padding: 4% 5%;
+    width: 80%;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 6%;
+    box-shadow: 0px 0px 60px #bbb7b7;
+    font-size: large;
+}
+
+#OGAME:hover {
+    box-shadow: 0px 0px 60px white;
+}
+
+@media screen and (max-width: 780px) {
+    #OGAME {
+        box-shadow: 0px 0px 60px white;
+    }
+}
+
+#OGAME .titre1 {
+    margin-bottom: 5%;
+}
+
+#OGAME .specifique {
+    margin: 2% 0%;
+}
+
+#OGAME .planète1 {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#OGAME .ogamenom {
+    display: flex;
+    margin: auto;
+    width: 45%;
+}
+
+#OGAME h4 {
+    color: black;
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+
+#OGAME .divimage {
+    background-image: url(../image/JeuxVidéo/ogameplanete2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+}
+
+
+/*---------------------------LOL-----------------*/
+
+#LOL {
+    color: #dfbf37;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    /*background-image: url(image/jeux/fondLOLmodifié.jpg);*/
+    background-repeat: repeat-y;
+    background-size: cover;
+    text-align: justify;
+    padding: 4% 5%;
+    width: 80%;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 6%;
+    box-shadow: 0px 0px 60px #bbb7b7;
+}
+
+#LOL:hover {
+    box-shadow: 0px 0px 60px #dfbf37;
+}
+
+@media screen and (max-width: 780px) {
+    #LOL {
+        box-shadow: 0px 0px 60px #dfbf37;
+    }
+}
+
+#LOL .titre2 {
+    margin-bottom: 5%;
+}
+
+#LOL .lolnom {
+    display: flex;
+    margin: auto;
+    width: 40%;
+}
+
+#LOL .jeu {
+    display: flex;
+    margin: auto;
+    width: 90%;
+}
+
+@media screen and (max-width: 1000px) {
+    #LOL .jeu {
+        margin-bottom: 5%;
+    }
+}
+
+#LOL .carte {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    margin-bottom: 4%;
+}
+
+#LOL h4 {
+    color: white;
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+
+
+/*---------------------------C.A.T.S.-----------------*/
+
+#CATS {
+    color: #ffe55e;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: justify;
+    padding: 4% 5%;
+    width: 80%;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 6%;
+    box-shadow: 0px 0px 60px #bbb7b7;
+}
+
+#CATS:hover {
+    box-shadow: 0px 0px 60px #ffe55e;
+}
+
+@media screen and (max-width: 780px) {
+    #CATS {
+        box-shadow: 0px 0px 60px #ffe55e;
+    }
+}
+
+#CATS .catsnom {
+    display: flex;
+    margin: auto;
+    width: 50%;
+}
+
+#CATS .combat {
+    display: flex;
+    margin: auto;
+    width: 95%;
+    margin-bottom: 4%;
+}
+
+#CATS .chat {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    padding-top: 0%;
+}
+
+@media screen and (max-width: 950px) {
+    #CATS .chat {
+        width: 100%;
+        margin-bottom: 4%;
+        padding-top: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #CATS .chat {
+        width: 50%;
+        margin-bottom: 4%;
+        padding-top: 0%;
+    }
+}
+
+#CATS .titre3 {
+    margin-bottom: 5%;
+}
+
+#CATS h4 {
+    color: white;
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+
+
+/*--------------------nav du bas---------------*/
+
+.nav_du_bas h4 {
+    display: none;
+}
+
+.nav_du_bas {
+    margin: auto;
+    text-align: center;
+    width: 22%;
+    font-size: 120%;
+}
+
+.nav_du_bas a {
+    color: black;
+    text-decoration: background;
+    transition: all 0.8s ease 0s;
+    text-align: center;
+    width: 100%;
+    border-radius: 60%;
+    border: black 1px solid;
+    font-size: 100%;
+}
+
+.nav_du_bas a:hover {
+    background-color: beige;
+    text-align: center;
+    width: 100%;
+    border-radius: 40%;
+    border: black 1px solid;
+    font-size: 100%;
+}
+
+@media screen and (max-width: 450px) {
+    .nav_du_bas {
+        width: 35%;
+    }
+}
+
+
+/*--------------------footer---------------*/
+
+footer {
+    margin-top: 4%;
+    height: 200px;
+    background-image: url(../image/JeuxVidéo/footer1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding-top: 3%;
+}
+
+.fondcontact {
+    text-align: center;
+}
+
+.fondcontact a:link {
+    color: white;
+}

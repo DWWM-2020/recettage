@@ -1,0 +1,538 @@
+body {
+    line-height: 170%;
+    font-size: 120%;
+    background-image: url(../image/Judo/fond.jpg) !important;
+    height: 400%;
+}
+
+h2 {
+    font-size: 300% !important;
+    text-shadow: 0 0 10px black, 0 0 10px black;
+    color: white;
+    font-family: "times roman";
+    padding-top: 3%;
+}
+
+
+/*--------------------------------------------*/
+
+header {
+    height: 100%;
+}
+
+header .video-fond {
+    width: 100%;
+    position: absolute;
+}
+
+header h1 {
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 7vw;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    text-decoration: none;
+    margin-left: 0%;
+    padding-right: 10%;
+}
+
+header li {
+    padding-right: 5%;
+    margin-top: 2%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+}
+
+header ul .moiexpé a {
+    color: red !important;
+}
+
+header a {
+    text-decoration: none !important;
+    color: white !important;
+    font-size: 1.38vw !important;
+}
+
+
+/*---------------------------------------*/
+
+#La-création,
+#Evolution,
+#La-pratique,
+#Les-grades,
+#Code-moral,
+#Le-but,
+#Mon-expérience {
+    padding-top: 7%;
+}
+
+.container {
+    border: black 0px solid;
+    box-shadow: 2px 2px 20px darkgray;
+    background-color: white;
+}
+
+
+/*------------------Début-----------------------*/
+
+
+/*-----------------------------------------*/
+
+#La-création {
+    text-align: center;
+    margin-top: 25%;
+}
+
+#La-création h2 {
+    margin-bottom: 2%;
+}
+
+#La-création .texte {
+    text-align: justify;
+    padding: 2%;
+    width: 600px;
+    height: 500px;
+    margin-top: 2%;
+}
+
+@media screen and (min-width: 600px) and (max-width: 750px) {
+    #La-création .texte {
+        height: 400px;
+        margin-top: 0%;
+    }
+}
+
+#La-création .arbre {
+    background-image: url(../image/Judo/arbreneige.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 600px;
+    height: 500px;
+    margin-top: 2%;
+}
+
+@media screen and (max-width: 767px) {
+    #La-création .arbre {
+        height: 300px;
+        margin-top: -70px;
+        width: 80%;
+    }
+}
+
+#La-création .padding {
+    padding: 2%;
+}
+
+
+/*--------------Evolution-------------------------*/
+
+#Evolution {
+    text-align: center;
+}
+
+#Evolution h2 {
+    margin-bottom: 1%;
+}
+
+#Evolution .france {
+    text-align: justify;
+    padding: 2%;
+    margin: 2%;
+}
+
+#Evolution .france img {
+    float: right;
+}
+
+#Evolution .carousel {
+    margin: 2%;
+}
+
+#Evolution .carousel img {
+    height: 300px;
+    width: 100%;
+}
+
+
+/*-----------------------changement de div----------------*/
+
+#Evolution .JO {
+    text-align: justify;
+    padding: 2%;
+}
+
+#Evolution .JO .tokyo {
+    text-align: center;
+    padding: 2%;
+}
+
+#Evolution .JO .texte {
+    padding: 2%;
+}
+
+#Evolution .JO .barcelone {
+    text-align: center;
+    padding: 2%;
+}
+
+#Evolution .non {
+    box-shadow: none;
+}
+
+
+/*-----------------------La pratique----------------------*/
+
+#La-pratique .cercle {
+    box-shadow: 2px 2px 20px darkgray;
+    margin-bottom: 2%;
+}
+
+.La-pratique1,
+.test {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .La-pratique1,
+    .test {
+        display: block;
+        text-align: center;
+    }
+    .La-pratique2 {
+        display: none;
+    }
+}
+
+#La-pratique .block1,
+#La-pratique .block2,
+#La-pratique .block3 {
+    text-align: center;
+    padding: 1%;
+}
+
+#La-pratique .La-pratique2 {
+    padding: 3%;
+}
+
+.texte2-ceinture {
+    margin-left: 15%;
+}
+
+
+/*--------------Dimenssions des images----------------*/
+
+#La-pratique img {
+    width: 150px;
+    height: 150px;
+    margin: 3% 0%;
+}
+
+
+/*-------------------------------------*/
+
+#Les-grades {
+    text-align: center;
+}
+
+#Les-grades h2 {
+    margin-bottom: 3%;
+}
+
+#Les-grades .texte1,
+#Les-grades .texte2,
+#Les-grades .texte3 {
+    margin: 3%;
+    padding: 3%;
+}
+
+#Les-grades .image1,
+#Les-grades .image2 {}
+
+#Les-grades img.ceinture3 {
+    width: 250px;
+    height: 300px;
+    margin: -20px;
+}
+
+#Les-grades img.ceinture4 {
+    width: 250px;
+    height: 300px;
+    margin: -40px;
+}
+
+
+/*-----------------------------------*/
+
+#Code-moral {
+    justify-content: center;
+    text-align: center;
+}
+
+#Code-moral h2 {
+    margin-bottom: 3%;
+}
+
+#Code-moral .texte2 {
+    padding: 2%;
+    margin-top: 4%;
+}
+
+#Code-moral .code3 {
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+#Code-moral .code3 img {
+    width: 80%;
+    height: auto;
+}
+
+#Code-moral .divvidéo {
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.vidéo1 {
+    width: 80%;
+    height: auto;
+}
+
+
+/*---------------------------------------*/
+
+#Le-but {
+    text-align: center;
+}
+
+#Le-but h2 {
+    margin-bottom: 3%;
+}
+
+#Le-but .block {
+    padding: 2%;
+}
+
+#Le-but .vidéodiv {
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+
+/*--------------------------------------------*/
+
+#Mon-expérience {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+#Mon-expérience h2 {
+    margin-bottom: 5%;
+}
+
+.monexpérience2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1010px) {
+    .monexpérience2 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.montdidier,
+.roye,
+.fréjus {
+    margin: 2%;
+}
+
+
+/*----------------logo---------------------*/
+
+#Mon-expérience .logo1 {
+    width: 220px;
+    height: 280px;
+}
+
+
+/*----------------Textes----------------*/
+
+.texte {
+    margin: 1% 5%;
+}
+
+
+/*--------------------photos---------------------------*/
+
+#Petit,
+#Moyen,
+#Grand {
+    margin-left: 10%;
+}
+
+@media screen and (max-width: 1010px) {
+    #Petit,
+    #Moyen,
+    #Grand {
+        margin-left: 36%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    #Petit,
+    #Moyen,
+    #Grand {
+        margin-left: 31%;
+    }
+}
+
+@media screen and (max-width: 766px) {
+    #Petit,
+    #Moyen,
+    #Grand {
+        margin-left: 25%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #Petit,
+    #Moyen,
+    #Grand {
+        margin-left: 23%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #Petit,
+    #Moyen,
+    #Grand {
+        margin-left: 20%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #Petit,
+    #Moyen,
+    #Grand {
+        margin-left: 18%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #Petit,
+    #Moyen,
+    #Grand {
+        margin-left: 11%;
+    }
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 400px;
+    margin-right: 30px;
+}
+
+.card .front,
+.card .back,
+.card .front1,
+.card .back1,
+.card .front2,
+.card .back2 {
+    display: block;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 1s;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*------------------------------font----------------*/
+
+.card .front {
+    background-image: url("../image/Judo/moimini2.jpg");
+    transform: rotateY(0deg);
+}
+
+.card .front1 {
+    background-image: url("../image/Judo/moimoyen.jpg");
+    transform: rotateY(0deg);
+}
+
+.card .front2 {
+    background-image: url("../image/Judo/moigrand.jpg");
+    transform: rotateY(0deg);
+}
+
+.card:hover .front,
+.card:hover .front1,
+.card:hover .front2 {
+    transform: rotateY(180deg);
+}
+
+
+/*--------------------------back-----------------*/
+
+.card .back,
+.card .back1,
+.card .back2 {
+    position: absolute;
+    background: #5c6b73;
+    opacity: 0;
+    transform: rotateY(-180deg);
+}
+
+.card:hover .back,
+.card:hover .back1,
+.card:hover .back2 {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+
+/*-----------------------expérience-écriture------------*/
+
+.card h3 {
+    font-size: 200%;
+    color: #e0fbfc;
+}
+
+.card p {
+    font-size: 110%;
+    color: #c2dfe3;
+}
+
+
+/*---------------------footer----------------------------*/
+
+footer {
+    margin-top: 4%;
+    height: 200px;
+    background-image: url(../image/Judo/judofin4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 70px;
+}
+
+.fondcontact {
+    text-align: center;
+}
+
+.fondcontact a:link {
+    color: rgb(3, 55, 90);
+}
