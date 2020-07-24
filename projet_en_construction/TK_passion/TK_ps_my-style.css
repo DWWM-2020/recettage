@@ -1,0 +1,89 @@
+ 
+ body,html{margin:0; padding:0}
+ *{box-sizing: border-box;}
+
+ body
+   {
+     background-color:#f7f7f7; perspective:800px;
+    }
+.navbar-brand{
+    text-shadow:4px 4px 3px #333,
+                5px 5px 8px #222;
+    margin-left:20px;
+    animation  :logo-rotate 3s ease-in-out 1s infinite alternate none running;
+}
+@keyframes logo-rotate{
+   from {transform:scale(0.5,0.5)}
+   to {transform:scale(1.2,1.2)}
+}
+ .navbar-brand span
+  {
+      font-weight:bold; 
+      font-size: 20px;
+      font-family:'Trebuchet MS','Lucida Sans Unicode','Lucida Grande','Lucida Sans';
+    }
+ .navbar-brand span:first-child
+  {
+     color:#FB0400
+    }
+ .navbar-brand span:last-child
+  {
+     color:#FFDA02
+    }
+ h1 {
+     text-align: center;
+     text-shadow:-4px -4px 4px #679DEC;
+     color:#2850CA
+    }
+.row img
+{
+    width:100%; height:70%
+}
+  p
+  {
+  text-align:left; 
+  font-size:17px; 
+  color:#708090; 
+  text-indent: 3%;
+    }
+
+  @keyframes image{
+     from{transform:rotateY(0deg)}
+     to{transform:rotateY(180deg)}
+ }
+
+ #carouselExampleSlidesOnly {margin-bottom:3%}
+ #carouselExampleSlidesOnly img{height:10%; width:100%}
+ h5{color:#0E318B; text-align:center}
+ h2{color:#333}
+ h6{text-decoration:underline}
+ 
+ .terre{overflow:hidden}
+ .terre .globe-terrestre {width:30%;float:left; margin-top:10%;}
+ .terre .nature{width:70%; float: right; margin-top:10%;}
+ .terre .globe-terrestre img{width:98%}
+
+ .fleurs{overflow:hidden; margin-top:5%; margin-bottom:5%}
+ .fleurs >div{ width:33.3333%;float:left; margin-bottom:5px;}
+ .fleurs >div img{ width:98%; margin:5px;border-radius: 50%;}
+
+ .mot img{ width:100%;height:30%}
+ .quote {font-size:24px; color:#708090; text-align:center; width:80%; height:40%; margin:2% auto; line-height: 1.7;}
+
+ .nature {font-size:24px; text-indent:2%; color:#708090}
+
+ .footer {background-color:rgba(188,218,244, 0.6);margin-bottom:20px; margin-top:5%;box-shadow:7px 7px 8px #ccc;}
+ .footer .row p {font-size:15px; color:#555; padding:2%}
+
+
+@media screen and (max-width:576px)
+{   p,q{font-size: 12px; padding:5px}
+    h1{font-size:13px}
+    h3{font-size:12px}
+    h5{font-size:11px}
+    h6{font-size:10px}
+    .footer .row p{font-size:12px;padding:2px}
+    .nature{font-size:11px; margin:2px 0;text-indent:1px}
+    .nature h2{font-size:12px}   
+}
+
