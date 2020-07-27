@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="accueil.css">
+    <title>Mes passions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+   <div style="background-image: url(accueil/bgAccueil.jpg); background-size: cover; background-position: center;
+   background-repeat: no-repeat; background-attachment: fixed; height: 900px;">
+
+        <div class="container pt-5">
+            <div class="bloc bg-blanc" style="height: 1000px;  box-shadow: 0px 4px 30px 7px black;">
+                <div class="row" style="background-image: url(accueil/bgAccueilZoom.jpg); background-size: cover; background-position: center;
+                        background-repeat: no-repeat; background-attachment: auto; height: 852.5px; margin: 0 0;">
+                    <div class="col-xl-12 d-flex justify-content-center col-lg-12 col-md-12 col-sm-12 position-relative">
+                        <nav class="navbar navbar-expand-xl navbar-expand-lg navbar-light bg-rouge position-absolute ">
+                            
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav ">
+                                    <li class="nav-item active">
+                                        <a class="nav-link font-weight-bold" href="#">Accueil</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link font-weight-bold" href="#">Graphisme</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link font-weight-bold" href="#">Symboles</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link font-weight-bold" href="#">Typographie</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="row">
+                        <div class="jumbotron bg-transparent col-xl-12 pt-0 pb-0 mt-0 mb-0 ml-5" style="background-image: url(accueil/bgJumbotron3.jpg); height: 260px; width: 550px;">
+                            
+                            <h1 class="text-light display-4 font-weight-bold position-relative" style="font-family: 'Fira Sans Extra Condensed', sans-serif;">
+                                Mes passions</h1>
+                            <p class="text-light lead position-relative">Bienvenue sur la page de mes passions. </p>
+                            <hr class="bg-light my-4 position-relative">
+                            <p class="text-light position-relative">Venez découvrir les passions qui m'accompagnent au quotidien.</p>
+                            <a class="btn btn-outline-light btn-lg text-light position-relative" href="#modal" role="button">Découvrir</a>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                    Launch demo modal
+                                </button>
+    
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            La passion est une très forte émotion tournée vers une personne, un concept,
+                                             ou un objet produisant un déséquilibre psychologique (l'objet de la passion 
+                                             occupe excessivement l'esprit). Elle se traduit en effet par un sentiment 
+                                             d'excitation inhabituelle alternant plaisir et souffrance du fait de la baisse 
+                                             importante de la sérotonine1 (neuromédiateur responsable de l'état émotionnel
+                                              de bonheur) et de l'augmentation de la dopamine (neuromédiateur provoquant 
+                                              la sensation de plaisir) qui active le système de récompense. Ce mécanisme
+                                               est particulièrement marqué dans le cas de la passion amoureuse2. La personne
+                                                passe ainsi généralement d'un état d'euphorie à une sensation de manque 
+                                                vis-à-vis de l'individu (dans le cas de la passion amoureuse3), de l'activité
+                                                 ou de l'objet sur lequel elle se focalise. Dans les cas les plus extrêmes,
+                                                  la passion peut donner lieu à une situation d'obsession (dont l'amour
+                                                   obsessionnel et la dépendance affective) et de dépendance conduisant la 
+                                                   personne qui la connaît à faire des choix néfastes, opposés à son bonheur,
+                                                    à ses intérêts ou à ceux de ses proches voire à commettre un crime passionnel
+                                                     ou aboutir à un suicide. 
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
